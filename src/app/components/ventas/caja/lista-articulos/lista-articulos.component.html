@@ -1,0 +1,35 @@
+<form [formGroup]="datosDetalle">
+    <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input formControlName="searchText" [(ngModel)]="searchText" type="text" class="form-control" placeholder="Buscar...">
+    </div>
+    <table class='table table-striped table-hover table-bordered' *ngIf='listArticulos && listArticulos.length'>
+        <thead>
+            <tr>
+            <tr>
+                <th>Referencia</th>
+                <th>Nombre</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Llevar</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let articulo of listArticulos | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize | filtroVentasc:searchText;"
+                (click)="getArticulo(articulo.referencia)">
+                <td>{{articulo.referencia}}</td>
+                <td>{{articulo.nombre}}</td>
+                <td class="numeros">{{articulo.cantidad}}</td>
+                <td class="numeros">{{articulo.precio  | currency: 'COP' }}</td>
+                <td><input type="number" class="form-control" formControlName="cantidad"></td>
+                <td><button class="btn mr-2" style="background-color: #0066FF; color: white;"
+                        (click)="agregarArticulo(articulo.referencia)">Agregar</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-end">
+        <ngb-pagination [collectionSize]="listArticulos.length" [(page)]="page" [pageSize]="pageSize">
+        </ngb-pagination>
+    </div>
+</form>

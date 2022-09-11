@@ -1,0 +1,107 @@
+.card-stats .card-body {
+    padding: 1rem 1.5rem
+}
+
+.card{
+    border-color: rgb(238, 238, 238);
+}
+
+.row{
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+}
+
+
+.icon-shape {
+    display: inline-flex;
+    padding: 12px;
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    text-align: center;
+    border-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+.icon i{
+    font-size: 20px;
+}
+
+.icon-shape {
+    display: inline-flex;
+    padding: 12px;
+    text-align: center;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center
+}
+
+.rounded-circle {
+    border-radius: 50%!important
+}
+
+.tarjetas{
+    padding: 10px;
+}
+
+.container{
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-top: 30px;
+}
+
+h2{
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+h5{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.valor{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fecha{
+    width: 200px;
+}
+
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label{
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-control{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    border-color: lightgray;
+}
+
+.btn-outline-secondary{
+    border-color: lightgray;
+}
